@@ -1,0 +1,25 @@
+{
+  "name": "perf-checks",
+  "version": "0.0.1",
+  "description": "A headless framework for nested checks on Scripture content, mainly in PERF.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "bash -c \"tape test/code/*.cjs | node_modules/tap-summary/bin/cmd.js\"",
+    "rawTest": "bash -c \"tape test/code/*.cjs\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Proskomma/perf-checks.git"
+  },
+  "author": "Mark Howe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Proskomma/perf-checks/issues"
+  },
+  "homepage": "https://github.com/Proskomma/perf-checks#readme",
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "tap-summary": "^4.0.0",
+    "tape": "^5.7.3"
+  }
+}
