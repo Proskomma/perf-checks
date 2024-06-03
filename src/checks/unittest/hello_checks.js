@@ -1,4 +1,4 @@
-function hello_checks({content, contentType}) {
+function hello_checks({content, contentType, level}) {
     if (!["perf"].includes(contentType)) {
         return {
             "completed": false,
@@ -10,7 +10,7 @@ function hello_checks({content, contentType}) {
      "issues": [
          {
              "name": "hello",
-             "level": "trivial",
+             level,
              "args": {
                  "who": "world"
              }

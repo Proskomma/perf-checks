@@ -1,6 +1,6 @@
 const {PerfRenderFromJson} = require('proskomma-json-tools');
 
-function verse_stats({content, contentType}) {
+function verse_stats({content, contentType, level}) {
     if (!["perf"].includes(contentType)) {
         return {
             "completed": false,
@@ -75,7 +75,7 @@ function verse_stats({content, contentType}) {
         for (const cv of output[k]) {
             issues.push({
                 name: k,
-                level: "minor",
+                level,
                 "args": {cv}
             });
         }

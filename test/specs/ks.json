@@ -5,7 +5,7 @@
     {
       "name": "versestats::verse_stats",
       "description": "Checks for empty, short and long verses",
-      "level": "trivial",
+      "level": "minor",
       "contentType": "perf",
       "children": []
     }

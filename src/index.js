@@ -24,10 +24,8 @@ function checker({spec, content, contentType, options={}}) {
             throw new Error(`Check ${checkFullName} expected contentType ${check.contentType} but could not read or coerce to this format`);
         }
         const [checkNS, checkName] = checkFullName.split('::');
-        const checkRet = checkFunctions[checkNS][checkName]({content: content[check.contentType], contentType});
-        checkRet.ns = checkNS;
-        checkRet.qName = checkName;
-        ret.push(checkRet);
+        const checkRet = checkFunctions[checkNS][checkName]({content: content[check.contentType], contentType, level: check.level});
+        ret.push({ns: checkNS, qName: checkName, ...checkRet});
     }
     options.verbose && console.log(`# Completed`);
     return ret;
