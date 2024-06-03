@@ -40,4 +40,10 @@ try {
 const options = {verbose: true};
 const checker = require('../src');
 
-console.log(JSON.stringify(checker({spec, contentType, content, options}), null, 2));
+console.log(
+    JSON.stringify(
+        checker(
+            {spec, contentType, content, options}),
+        null,
+        2)
+);
