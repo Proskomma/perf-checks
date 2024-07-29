@@ -21,7 +21,7 @@ function out_of_order_chapters({content, contentType, level}) {
         ],
         mark: [
             {
-                description: "Update Chapter state",
+                description: "Update chapter state",
                 test: () => true,
                 action: ({config, context, workspace, output}) => {
                     try {

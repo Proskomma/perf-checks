@@ -1928,13 +1928,6 @@
               "type": "mark",
               "subtype": "verses",
               "atts": {
-                "number": "33"
-              }
-            },
-            {
-              "type": "mark",
-              "subtype": "verses",
-              "atts": {
                 "number": "3"
               }
             },

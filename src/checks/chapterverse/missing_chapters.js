@@ -27,8 +27,10 @@ function missing_chapters({content, contentType, level}) {
                     try {
                         const element = context.sequences[0].element;
                         if (element.subType === "chapter") {
-                            const chapter = parseInt(element.atts["number"]);
-                            workspace.chapters.add(chapter);
+                            if (workspace.chapter) {
+                                const chapter = parseInt(element.atts["number"]);
+                                workspace.chapters.add(chapter);
+                            }
                         }
                     } catch (err) {
                         console.error(err);
@@ -44,14 +46,12 @@ function missing_chapters({content, contentType, level}) {
                 test: () => true,
                 action: ({config, context, workspace, output}) => {
                     const chapters = Array.from(workspace.chapters).sort((a, b) => a - b);
-                    if (chapters.length > 1) {
-                        let ch = chapters[0];
-                        while (ch <= chapters[chapters.length - 1]) {
-                            if (!workspace.chapters.has(ch)) {
-                                output.missingChapters.push(ch);
-                            }
-                            ch++;
+                    let ch = 1;
+                    while (ch <= chapters[chapters.length - 1]) {
+                        if (!workspace.chapters.has(ch)) {
+                            output.missingChapters.push(ch);
                         }
+                        ch++;
                     }
                 }
             }
