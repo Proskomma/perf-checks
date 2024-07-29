@@ -32,21 +32,21 @@
     },
     {
       "name": "chapterverse::missing_verses",
-      "description": "Checks for missing verse numbers",
+      "description": "Checks for missing verse numbers within chapters",
       "level": "major",
       "contentType": "perf",
       "children": []
     },
     {
       "name": "chapterverse::out_of_order_chapters",
-      "description": "Checks for out-of-order chapter numbers",
+      "description": "Checks for out-of-order chapter numbers within chapters",
       "level": "major",
       "contentType": "perf",
       "children": []
     },
     {
       "name": "chapterverse::out_of_order_verses",
-      "description": "Checks for out_of_order verse numbers",
+      "description": "Checks for out_of_order verse numbers within chapters",
       "level": "major",
       "contentType": "perf",
       "children": []
