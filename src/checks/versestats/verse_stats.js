@@ -73,8 +73,11 @@ function verse_stats({content, contentType, level}) {
     const issues = [];
     for (const [k, v] of Object.entries(output)) {
         for (const cv of output[k]) {
+            const [c, v] = cv.split(":");
             issues.push({
                 name: k,
+                chapter: c,
+                verse: v,
                 level,
                 "args": {cv}
             });

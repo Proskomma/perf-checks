@@ -49,8 +49,11 @@ function out_of_order_chapters({content, contentType, level}) {
     const issues = [];
     for (const [k, v] of Object.entries(output)) {
         for (const cv of output[k]) {
+            const [c1, c2] = cv.split(">");
             issues.push({
                 name: k,
+                chapter: c2,
+                verse: null,
                 level,
                 "args": {cv}
             });

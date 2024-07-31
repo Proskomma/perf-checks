@@ -65,6 +65,8 @@ function missing_chapters({content, contentType, level}) {
         for (const cv of output[k]) {
             issues.push({
                 name: k,
+                chapter: cv,
+                verse: null,
                 level,
                 "args": {cv}
             });

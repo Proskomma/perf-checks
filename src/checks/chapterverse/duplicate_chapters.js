@@ -60,6 +60,8 @@ function duplicate_chapters({content, contentType, level}) {
     for (const [k, v] of Object.entries(output)) {
         for (const cv of output[k]) {
             issues.push({
+                chapter: cv,
+                verse: null,
                 name: k,
                 level,
                 "args": {cv}

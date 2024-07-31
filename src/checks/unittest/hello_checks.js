@@ -11,6 +11,8 @@ function hello_checks({content, contentType, level}) {
          {
              "name": "hello",
              level,
+             "chapter": null,
+             "verse": 0,
              "args": {
                  "who": "world"
              }

@@ -53,7 +53,12 @@ function out_of_order_verses({content, contentType, level}) {
     const issues = [];
     for (const [k, v] of Object.entries(output)) {
         for (const cv of output[k]) {
+            const [c, v] = cv.split(":");
+            const [cv1, cv2] = cv.split(">");
+            const [v1, v2] = cv2.split(":");
             issues.push({
+                chapter: c,
+                verse: v2,
                 name: k,
                 level,
                 "args": {cv}
