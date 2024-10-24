@@ -27,7 +27,7 @@ function out_of_order_chapters({content, contentType, level}) {
                     try {
                         const element = context.sequences[0].element;
                         if (element.subType === "chapter") {
-                            const chapter = element.atts["number"];
+                            const chapter = parseInt(element.atts["number"]);
                             const previousChapter = workspace.chapters[workspace.chapters.length - 1];
                             if (workspace.chapters.length > 0 && chapter < previousChapter) {
                                 output.outOfOrderChapters.push(`${previousChapter}>${chapter}`);
